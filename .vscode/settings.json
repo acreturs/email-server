@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/081c5fa3-ab13-4254-88f6-91af28809653/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/EmailImageServer",
+  "appService.deploySubpath": "."
+}
