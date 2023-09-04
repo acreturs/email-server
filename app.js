@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var emailRouter = require('./routes/email');
+var pictureRouter = require('./routes/picture');
 var app = express();
 
 // view engine setup
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/email', emailRouter)
+app.use('/picture', express.static('./korken-dose-mit-deckel-klarglas__0713739_pe729738_s5.jpg'))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
