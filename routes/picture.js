@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router();
+var pictureRouter = express.Router();
 var nodemailer = require('nodemailer');
 var receiver = "acornett@gmx.de"
 
@@ -36,7 +36,7 @@ function sendMail(openedby) {
 //hier muss noch email schicken, wenn geöffnet soll die get methode auslesen,
 // an wen ich gesendet habe, dann kriege ich bestätigung dafür, dass erhalten
 /* GET home page. */
-router.get('/', function (req, res, next) {
+pictureRouter.get('/', function (req, res, next) {
     console.log(req)
     const email = req.baseUrl
     const parts = email.split('/');
@@ -48,4 +48,4 @@ router.get('/', function (req, res, next) {
     res.sendFile(imagePath)
 });
 
-module.exports = { router, receiver };
+module.exports = { pictureRouter, receiver };

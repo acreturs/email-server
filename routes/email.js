@@ -36,4 +36,4 @@ router.get('/', function (req, res, next) {
     sendMail()
     res.render('index', { title: 'Expressdas klappt' });
 });
-module.exports = { router, receiver };
+module.exports = { router };

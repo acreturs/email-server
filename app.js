@@ -3,11 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const { receiver, router } = require('./routes/email.js');
+const { router } = require('./routes/email.js');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //var emailRouter = require('./routes/email');
-var pictureRouter = require('./routes/picture');
+//var pictureRouter = require('./routes/picture');
+const { pictureRouter, receiver } = require('./routes/picture.js');
 var app = express();
 
 // view engine setup
@@ -27,7 +28,7 @@ app.use(`/picture/*`, pictureRouter)
 //app.use(`/picture/corny`, pictureRouter)
 //app.use(`/picture`, express.static('./korken-dose-mit-deckel-klarglas__0713739_pe729738_s5.jpg'))
 //pictureRouter)
-app.use('/picture', pictureRouter)
+//app.use('/picture', pictureRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
