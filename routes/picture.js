@@ -37,12 +37,10 @@ function sendMail(openedby) {
 // an wen ich gesendet habe, dann kriege ich bestätigung dafür, dass erhalten
 /* GET home page. */
 pictureRouter.get('/', function (req, res, next) {
-    console.log(req)
     const email = req.baseUrl
     const parts = email.split('/');
-    const result = parts.slice(3).join('/'); // Get the string after the second slash
+    const result = parts[2] // Get the string after the second slash
     console.log("Email geöffnet von " + result)
-    receiver = result
     const imagePath = __dirname + '/korken-dose-mit-deckel-klarglas__0713739_pe729738_s5.jpg';
     sendMail(result)
     res.sendFile(imagePath)
