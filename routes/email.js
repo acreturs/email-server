@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-
-var receiver = 'acornett@gmx.de'//hier muss dann über die verschiedenen Mails itteriert werden
+const { receiver } = require('./picture');
+//hier muss dann über die verschiedenen Mails itteriert werden
 
 
 var transporter = nodemailer.createTransport({
@@ -17,7 +17,7 @@ var mailOptions = {
     from: 'alexander.cornett.2103@gmail.co',
     to: receiver,
     subject: 'Sending Email using Node.js',
-    html: '<p>HTML version of the message</p>' +
+    html: '<p>HTML version of the message wenn gesendet wurde dann wird das hier nochmal geschickt</p>' +
         `<img src="https://emailimageserver.azurewebsites.net/picture/${receiver}" alt="Girl in a jacket" width="500" height="600">`
 };
 //heroku server aufsetzen
