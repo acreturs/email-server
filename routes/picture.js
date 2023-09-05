@@ -34,7 +34,7 @@ function sendMail(openedby) {
 }
 
 //hier muss noch email schicken, wenn geöffnet soll die get methode auslesen,
-// an wen ich gesendet habe, dann kriege ich bestätigung dafür, dass erhalten
+// an wen ich gesendet testitng new changes 2habe, dann kriege ich bestätigung dafür, dass erhalten
 /* GET home page. */
 pictureRouter.get('/', function (req, res, next) {
     const email = req.baseUrl
