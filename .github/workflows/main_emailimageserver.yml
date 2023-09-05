@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'EmailImageServer'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_70E15F0F3477411FB5B8CE470172E15E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_35C25381B21C47188EA82FE1E9EF2040 }}
           package: .
